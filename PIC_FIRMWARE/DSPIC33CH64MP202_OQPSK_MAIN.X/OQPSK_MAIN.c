@@ -10,5 +10,7 @@
 #include "OQPSK_LUT.h"
 
 int main(void) {
+    //SYSTEM SETTING -----------------------------------------------------------
+    
     return 0;
 }
