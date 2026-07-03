@@ -16,7 +16,7 @@
 #define _USE_MATH_DEFINES
 
 #define resolution 128// pi/2
-#define MAX_DUTY_CYCLE 0xFFFF
+#define MAX_DUTY_CYCLE 0x03FF
 #define SIN_LUT_NAME "SIN_LUT"
 
 #define PI 3.14159265358979323846
