@@ -6,6 +6,7 @@
             <name>DSPIC33CH64MP202_OQPSK_MAIN</name>
             <creation-uuid>468539fe-892b-4c85-9f26-330627284495</creation-uuid>
             <make-project-type>0</make-project-type>
+            <sourceEncoding>UTF-8</sourceEncoding>
             <make-dep-projects/>
             <sourceRootList/>
             <confList>
@@ -14,7 +15,6 @@
                     <type>2</type>
                 </confElem>
             </confList>
-            <sourceEncoding>UTF-8</sourceEncoding>
             <formatting>
                 <project-formatting-style>false</project-formatting-style>
             </formatting>

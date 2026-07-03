@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=
+SOURCEFILES_QUOTED_IF_SPACED=OQPSK_MAIN.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=
-POSSIBLE_DEPFILES=
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/OQPSK_MAIN.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/OQPSK_MAIN.o.d
 
 # Object Files
-OBJECTFILES=
+OBJECTFILES=${OBJECTDIR}/OQPSK_MAIN.o
 
 # Source Files
-SOURCEFILES=
+SOURCEFILES=OQPSK_MAIN.c
 
 
 
@@ -89,7 +89,19 @@ MP_LINKER_FILE_OPTION=,--script=p33CH64MP202.gld
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
+${OBJECTDIR}/OQPSK_MAIN.o: OQPSK_MAIN.c  .generated_files/flags/default/9d61c592a527d48c0cc439b1cbd506aeb7a40d24 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/OQPSK_MAIN.o.d 
+	@${RM} ${OBJECTDIR}/OQPSK_MAIN.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  OQPSK_MAIN.c  -o ${OBJECTDIR}/OQPSK_MAIN.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/OQPSK_MAIN.o.d"      -g -D__DEBUG   -mno-eds-warn  -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O2 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	
 else
+${OBJECTDIR}/OQPSK_MAIN.o: OQPSK_MAIN.c  .generated_files/flags/default/99fc83a745a4040d7a8fad2724cb2698f7e97dd3 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/OQPSK_MAIN.o.d 
+	@${RM} ${OBJECTDIR}/OQPSK_MAIN.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  OQPSK_MAIN.c  -o ${OBJECTDIR}/OQPSK_MAIN.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/OQPSK_MAIN.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O2 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	
 endif
 
 # ------------------------------------------------------------------------------------

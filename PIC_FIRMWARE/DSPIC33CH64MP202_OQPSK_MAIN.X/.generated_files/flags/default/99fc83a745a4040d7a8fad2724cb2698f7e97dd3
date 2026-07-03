@@ -1,0 +1,1 @@
+ -c -mcpu=$(MP_PROCESSOR_OPTION)      -mno-eds-warn  -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O2 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"C:\Users\kojim\Documents\GitHub\DSPI33CH64MP202_OQPSK_MAIN\PIC_FIRMWARE\DSPIC33CH64MP202_OQPSK_MAIN.X\OQPSK_MAIN.c

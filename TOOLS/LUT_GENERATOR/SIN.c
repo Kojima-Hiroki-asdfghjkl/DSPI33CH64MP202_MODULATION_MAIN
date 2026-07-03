@@ -26,13 +26,18 @@
 
 
 int main() {
-    printf("Generating sine LUT...\n");
+    printf("Generating sine LUT...\n\n");
+    printf("/*\n");
     printf("LUT length: %d\n", get_lut_length());
     printf("LUT name: %s\n", SIN_LUT_NAME);
-
+    printf("Resolution: %d\n", resolution);
+    printf("MAX_DUTY_CYCLE: 0x%04X\n", MAX_DUTY_CYCLE);
+    printf("*/\n");
     printf("const uint16_t %s[%d] = {\n", SIN_LUT_NAME, get_lut_length());
-    printf("    ");
     for(int i = 0; i < get_lut_length(); i++) {
+        if (i % 16 == 0) {
+            printf("    ");
+        }
         double angle = (double)i * (PI / 2.0) / resolution;
         double sin_value = sin(angle);
         uint16_t duty_cycle_value = (uint16_t)(sin_value * (MAX_DUTY_CYCLE / 2.0) + (MAX_DUTY_CYCLE / 2.0));
@@ -41,10 +46,13 @@ int main() {
             printf(", ");
         }
         if ((i + 1) % 16 == 0) {
-            printf("\n    ");
+            printf("\n");
         }
     }
-    printf("\n};\n");
+    if (get_lut_length() % 16 != 0) {
+        printf("\n");
+    }
+    printf("};\n");
     printf("LUT generation complete.\n");
 
     return 0;
