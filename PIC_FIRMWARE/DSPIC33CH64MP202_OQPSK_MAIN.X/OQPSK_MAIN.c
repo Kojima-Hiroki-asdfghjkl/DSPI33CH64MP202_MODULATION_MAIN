@@ -40,6 +40,10 @@ int main(void) {
     ANSELA = 0x0001;//RA0:ANALOG
     LATA = 0x0002;
     
+    //DAC SETTING --------------------------------------------------------------
+    DACCTRL1L = 0x0040;//CLK:AFVCO/2, CLKDIV:1x
+    
+    
     while (1){
         LATA ^= 0x0004;
         __delay_ms(500);
