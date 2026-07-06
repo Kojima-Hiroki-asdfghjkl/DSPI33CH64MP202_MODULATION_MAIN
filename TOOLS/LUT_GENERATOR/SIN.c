@@ -22,7 +22,7 @@
 #define PI 3.14159265358979323846
 
 #define deg2rad(x) ((x) * (PI / 180.0))
-#define get_lut_length() (resolution * 4 * 2)
+#define get_lut_length() (resolution * 4)
 
 
 int main() {
