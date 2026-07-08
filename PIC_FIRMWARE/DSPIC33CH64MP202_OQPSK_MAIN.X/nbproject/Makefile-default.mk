@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=OQPSK_MAIN.c
+SOURCEFILES_QUOTED_IF_SPACED=OQPSK_MAIN.c LUT.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/OQPSK_MAIN.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/OQPSK_MAIN.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/OQPSK_MAIN.o ${OBJECTDIR}/LUT.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/OQPSK_MAIN.o.d ${OBJECTDIR}/LUT.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/OQPSK_MAIN.o
+OBJECTFILES=${OBJECTDIR}/OQPSK_MAIN.o ${OBJECTDIR}/LUT.o
 
 # Source Files
-SOURCEFILES=OQPSK_MAIN.c
+SOURCEFILES=OQPSK_MAIN.c LUT.c
 
 
 
@@ -95,12 +95,24 @@ ${OBJECTDIR}/OQPSK_MAIN.o: OQPSK_MAIN.c  .generated_files/flags/default/d403438c
 	@${RM} ${OBJECTDIR}/OQPSK_MAIN.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  OQPSK_MAIN.c  -o ${OBJECTDIR}/OQPSK_MAIN.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/OQPSK_MAIN.o.d"      -g -D__DEBUG   -mno-eds-warn  -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -save-temps -specs=cmd.txt -O2 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
+${OBJECTDIR}/LUT.o: LUT.c  .generated_files/flags/default/7e62f88524e915b1214af190db22225ca370ce61 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/LUT.o.d 
+	@${RM} ${OBJECTDIR}/LUT.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  LUT.c  -o ${OBJECTDIR}/LUT.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/LUT.o.d"      -g -D__DEBUG   -mno-eds-warn  -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -save-temps -specs=cmd.txt -O2 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	
 else
 ${OBJECTDIR}/OQPSK_MAIN.o: OQPSK_MAIN.c  .generated_files/flags/default/b12efb0820108808aa771291fcfe9e16c891c8e4 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/OQPSK_MAIN.o.d 
 	@${RM} ${OBJECTDIR}/OQPSK_MAIN.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  OQPSK_MAIN.c  -o ${OBJECTDIR}/OQPSK_MAIN.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/OQPSK_MAIN.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -save-temps -specs=cmd.txt -O2 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	
+${OBJECTDIR}/LUT.o: LUT.c  .generated_files/flags/default/ca610b7f4362c85ed01bbce989aeadd1b84fa304 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/LUT.o.d 
+	@${RM} ${OBJECTDIR}/LUT.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  LUT.c  -o ${OBJECTDIR}/LUT.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/LUT.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -save-temps -specs=cmd.txt -O2 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
 endif
 

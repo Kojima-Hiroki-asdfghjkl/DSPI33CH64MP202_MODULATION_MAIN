@@ -8,8 +8,7 @@
 #include "Configuration.h"
 #include <xc.h>
 #include <stdint.h>
-#include "OQPSK_LUT.h"
-
+#include "LUT.h"
 
 #define FCY 90000000UL//90MHz
 #include <libpic30.h>
@@ -36,14 +35,17 @@ int main(void) {
 	// DAC用クロック設定：500MHz( AFPLLO = (8 * M) / (N1 * N2 * N3) )
     
 //	APLLFBD1bits.APLLFBDIV = 125; // M
-//	ACLKCON1bits.APLLPRE = 1;	// N1
-//	APLLDIV1bits.APOST1DIV = 2;	// N2 (1～7, must POST1DIVx >= POST2DIVx def:4)
-//	APLLDIV1bits.APOST2DIV = 1;	// N3 (1～7, must POST1DIVx >= POST2DIVx def:1)
+//	ACLKCON1bits.APLLPRE = 1;	  // N1
+//	APLLDIV1bits.APOST1DIV = 2;	  // N2 (1～7, must POST1DIVx >= POST2DIVx def:4)
+//	APLLDIV1bits.APOST2DIV = 1;	  // N3 (1～7, must POST1DIVx >= POST2DIVx def:1)
     
     //PORT SETTING -------------------------------------------------------------
     TRISA = 0x0000;
     ANSELA = 0x0001;//RA0:ANALOG
     LATA = 0x0002;
+    
+    //PPS SETTING --------------------------------------------------------------
+    
     
    /*
     * 本当はDACで出力したかったんだけど，使ってるマイコンのDACが死にかけなのかうまく出力できないから，
@@ -61,6 +63,7 @@ int main(void) {
         
 //        LATB ^= 0x0004;
         LATA ^= 0x0004;
+        U1TXREG = 'A';
         __delay_ms(100);
     }
     

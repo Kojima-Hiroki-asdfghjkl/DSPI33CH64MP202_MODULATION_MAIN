@@ -19,9 +19,10 @@
                    displayName="Source Files"
                    projectFiles="true">
       <itemPath>OQPSK_MAIN.c</itemPath>
-      <itemPath>OQPSK_LUT.h</itemPath>
       <itemPath>Configuration.h</itemPath>
       <itemPath>cmd.txt</itemPath>
+      <itemPath>LUT.c</itemPath>
+      <itemPath>LUT.h</itemPath>
     </logicalFolder>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
