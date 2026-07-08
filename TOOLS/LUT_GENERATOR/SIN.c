@@ -16,7 +16,7 @@
 #define _USE_MATH_DEFINES
 
 #define resolution 128// pi/2
-#define start_angle 45//pi/4
+#define start_angle 0//pi/4
 #define MAX_DUTY_CYCLE 0x03FF
 #define SIN_LUT_NAME "SIN_LUT"
 
